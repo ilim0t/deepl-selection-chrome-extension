@@ -1,19 +1,12 @@
 {
   "name": "DeepL 翻訳",
-  "version": "0.2",
+  "version": "0.3",
   "description": "選択したテキストをDeepL翻訳します",
-  "permissions": ["contextMenus", "tabs"],
+  "permissions": ["contextMenus", "activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "run_at": "document_end",
-      "js": ["contentScript.js"]
-    }
-  ],
   "icons": { "48": "DeepL_Logo_darkBlue_v2.png" },
   "manifest_version": 2
 }

@@ -11,8 +11,9 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     let text;
 
     if (tabId > 0) {
-        text = await new Promise(resolve => chrome.tabs.sendMessage(tabId, {}, resolve))
-            .then(({ selectionText }) => {
+        text = await new Promise(resolve => chrome.tabs.executeScript(tabId, { code: "window.getSelection().toString();" }, resolve))
+            .then(response => response[0])
+            .then(selectionText => {
                 const lines = selectionText.split("\n");
                 // const undesiredLineBreak = lines.map(line => line.length < 10 && line.split(" ").length === 1);
 
