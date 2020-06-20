@@ -1,7 +1,7 @@
 {
   "name": "DeepL 翻訳",
   "version": "0.1",
-  "description": "It provides a useful feature for watching videos.",
+  "description": "選択したテキストをDeepL翻訳します",
   "permissions": ["contextMenus", "tabs"],
   "background": {
     "scripts": ["background.js"],
