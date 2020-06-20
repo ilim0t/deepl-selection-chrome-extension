@@ -1,6 +1,6 @@
 {
   "name": "DeepL 翻訳",
-  "version": "0.1",
+  "version": "0.2",
   "description": "選択したテキストをDeepL翻訳します",
   "permissions": ["contextMenus", "tabs"],
   "background": {
